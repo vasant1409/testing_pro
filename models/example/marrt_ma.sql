@@ -2,9 +2,9 @@ WITH
    {{config(materialized='table')}}
 
 MART as (
-SELECT * FROM {{ref('annual_enterprise_survey01')}} 
+SELECT * FROM {{ref('sample1_stg1')}} 
 UNION ALL
-SELECT * FROM {{ref('annual_enterprise_survey02')}} 
+SELECT * FROM {{ref('sample2_stg2')}} 
 ) 
 
 SELECT * FROM MART
